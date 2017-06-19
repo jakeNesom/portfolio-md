@@ -1,0 +1,34 @@
+<div class="top-bar">
+    <span >
+            <!--<p>{{animalData[0].properties.Intake_Date}}</p>-->
+           <!-- <p>{{animalData[0].properties.Animal_Name}}</p>-->
+        </span>
+</div>
+<div class="container-fluid-jn">
+    <div class="row">
+    <div class="col-xs-12">
+       <div id="gmap"></div>
+       <sebm-google-map [latitude]="lat" [longitude]="lng" [styles]="gmapStyle"
+           [zoom]="10">
+        
+
+        <sebm-google-map-marker 
+          *ngFor="let l of locArr; let i = index"
+          (markerClick)="clickedMarker(l.label, i)"
+          [latitude]="l.loc.lat"
+          [longitude]="l.loc.lng"
+          [label]="l.label"
+          >
+          
+        <sebm-google-map-info-window>
+          <h5>Type: {{l.Animal_Type}}</h5>
+          <h5>Picked Up: {{l.Picked_up_Location}}</h5>
+          <h5>Date: {{l.Intake_Date | date:'medium' }}</h5>
+        </sebm-google-map-info-window>
+        
+      </sebm-google-map-marker>
+        </sebm-google-map>
+    </div>
+    
+</div>
+<div class='agm-info-window-content'> test </div>
