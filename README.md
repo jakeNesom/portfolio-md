@@ -1,16 +1,17 @@
-# pupper-alert
+# Jake Nesom's web portfolio
 
-App utilizing googleMaps API and City of Sacramento data APIs to map recently found shelter animals and their discovery locations
+This repository stores the code to my web portfolio @ jakenesom.com where I showcase my personality and projects
 
 Featured Tech & Techniques - 
 - Angular 4 SPA
-- bootsrap
-- http Service
-  - get animal data from city of sacramento 
-  - get map data from Google
-  - transform and post cross-streets to get latitude/longitude coordinates for google maps
-- JSON manipulation
-- Angular animations for fade in/out effects
+- Twitter Bootstrap
+- Angular Material Design library https://material.angular.io/
+- Angular Techniques like
+      - Animations
+      - Web Forms
+      - Inejctable Services
+      - 
+      
 
 
 
