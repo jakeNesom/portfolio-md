@@ -1,6 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file,
+ and also import other style files */
 
+/* Bootstrap components */
 @import url('../node_modules/bootswatch/yeti/bootstrap.min.css');
 
+/* Font Awesome for Vector Glyphs */
 @import url('../node_modules/font-awesome/css/font-awesome.min.css');
 
+
+/* Angular Material Stylehseet */ 
+@import url('../node_modules/@angular/material/prebuilt-themes/indigo-pink.css');
+
+/* Google Fonts Icons */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');

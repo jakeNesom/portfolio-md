@@ -43,10 +43,73 @@ interface Window {
   ]
 })
 export class AppComponent  { 
-  public loc: string = 'Sacramento';
-  public title: string = 'pupper-alert' + ' ' + this.loc;
-  public lat: number = 38.5764870;
-  public lng: number = -121.4929151;
+  public setup = {
+    "color": {
+      "primary":"#00b0ff",
+      "light":"#69e2ff",
+      "dark": "##0081cb"
+    }
+  }
+
+  public skills = [
+    { 
+      "name": "Angular",
+      "value":"90",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "Javascript",
+      "value":"90",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "Bootstrap",
+      "value":"90",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "HTML",
+      "value":"90",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "CSS",
+      "value":"90",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "NodeJS",
+      "value":"60",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "ExpressJS",
+      "value":"60",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+    { 
+      "name": "MongoDB",
+      "value":"50",
+      "bufferVal":"100",
+      "color":"primary",
+      "mode":"mode"
+    },
+  ];
+
   
   options:any;
   styles:any;
@@ -71,7 +134,7 @@ export class AppComponent  {
   //           mapTypeId: google.maps.MapTypeId.ROADMAP
   //       };
   //     var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
-      this.getPupperData();
+    
         
   }
 
