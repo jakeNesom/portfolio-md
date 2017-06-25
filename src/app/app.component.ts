@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 import { PupperData } from './services/pupper-data.service';
 import { AddressManip } from './services/address-manip.service';
@@ -18,25 +18,23 @@ interface Window {
   templateUrl: 'views/app.component.html',
   styleUrls: [ 'css/app.component.css'],
   animations: [
-    trigger('fadeOut', [
-      state('rest', style({
-        opacity: '100'
+    trigger('iconEnter', [
+      state('false', style({
+        opacity:0,
+        transform: 'translateX(-100%)'
       })),
-      state('out',   style({
-        opacity: '0'
+      state('true',   style({
+        opacity:1,
+        transform: 'translateX(0)' 
       })),
-      state('set', style({
-        opacity: '100'
-      })),
-      transition('rest => out', [ 
-        animate('1s', style({opacity: '0'}))
+      transition('0 => 1', [ 
+        animate(300, keyframes([
+        style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
+        style({opacity: 1, transform: 'translateX(15px)',  offset: 0.3}),
+        style({opacity: 1, transform: 'translateX(0)',     offset: 1.0})
+      ]))
       ]),
-      transition('out => set', [ 
-        animate('1s', style({opacity: '100'}))
-      ]),
-      transition('set => out', [ 
-        animate('1s', style({opacity: '0'}))
-      ]),
+      
 
     ])
     
@@ -110,7 +108,7 @@ export class AppComponent  {
     },
   ];
 
-  
+  public initialLoad = false;
   options:any;
   styles:any;
   
@@ -135,6 +133,7 @@ export class AppComponent  {
   //       };
   //     var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
     
+    this.initialLoad = true;
         
   }
 

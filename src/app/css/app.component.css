@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
 
 /* tag styles */
 a:link {
@@ -137,9 +139,60 @@ a#icon-link {
 #abt p {
   margin-top: 5px;
   margin-right:20px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  /*font-family:'Open Sans', 'sans-serif';*/
 }
 
 #prjcts {
-
   margin-top:25px;
+}
+
+#prjcts p {
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight:400;
+
+}
+
+#topline {
+  font-size:16px;
+  font-weight:300;
+
+}
+
+#circle-font { 
+  position:relative;
+  top:-2px;
+  margin-right:10px;
+  font-size:8px;
+}
+/* Special Styles */
+/* Styles used to overwrite some angular-material theme styles 
+in a janky way - better way is to create a new SASS file and compile a 
+new theme --- for another day - jn */
+
+#label {
+  font-size: 25px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 300;
+}
+
+#pill {
+  padding: 5px 6px 5px 6px;
+  margin-bottom:10px;
+  font-size: 10px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 400;
+  background-color:lightgrey;
+  
+  border-radius:10px;
+}
+
+#pill:hover {
+  cursor:pointer;
+  background-color:#f8f8f8;
+}
+#bottom-line {
+
+  padding: 8px 0px 8px 0px !important;
 }

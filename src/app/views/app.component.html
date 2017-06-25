@@ -1,23 +1,24 @@
 
 <div class="nav-jn hidden" > 
-
  <a href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i> </a>
  <a href="https://github.com/jakeNesom" id="icon-link" target="_blank" ><i class="fa fa-github fa-2x fa-fw" aria-hidden="true"></i> </a>
  <a href="https://stackoverflow.com/users/5569658/jake" target="_blank" id="icon-link"><i class="fa fa-stack-overflow fa-2x fa-fw" aria-hidden="true"></i> </a>
  <a href="mailto:jnesom@me.com"  id="icon-link" ><i class="fa fa-envelope fa-fw fa-2x" aria-hidden="true"></i></a>
+ <a href="../../assets/dl/jakeNesomFEDResume.pdf" id="icon-link"><i class="fa fa-file-text fa-fw fa-2x" aria-hidden="true"></i></a>
  <h4 class="pull-right">Jake Nesom • Front End Dev</h4>
 </div>
-<div class="spacer hidden "></div>
+<div class="spacer hidden"></div>
 <div class="container-fluid-jn">
   <div class="jumbotron jn ">
     <div style="margin-left:80px;">
       <h1>Jake Nesom</h1>
       <p>front-end angular developer</p>
       <p style="margin-left:-10px;">
-        <a href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i> </a>
+        <a [@iconEnter]="initialLoad" href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i> </a>
         <a href="https://github.com/jakeNesom" target="_blank" id="icon-link"><i class="fa fa-github fa-2x fa-fw" aria-hidden="true"></i> </a>
         <a href="https://stackoverflow.com/users/5569658/jake" target="_blank" id="icon-link"><i class="fa fa-stack-overflow fa-2x fa-fw" aria-hidden="true"></i> </a>
         <a href="mailto:jnesom@me.com" id="icon-link"><i class="fa fa-envelope fa-fw fa-2x" aria-hidden="true"  ></i></a>
+        <a href="../../assets/dl/jakeNesomFEDResume.pdf" id="icon-link" download><i class="fa fa-file-text fa-fw fa-2x" aria-hidden="true"></i></a>
       </p>
     </div>
   </div>
@@ -27,17 +28,18 @@
   <md-tab label="About">
     <div id="abt">
       <p> My name is Jake and  I'm a creative, enthusiastic entry-level dev looking for front-end / full-stack work.  </p>
-      <br><h5>Why work with me? </h5>
+      <h3 style="padding-top: 10px;">Why work with me? </h3>
       <ul>
-        <li><h6>Love of learning</h6></li>
-        <p>I really enjoy developing and picking up new knowledge.
-          I want my skills to continually improve so I can add value
-        </p>
-        <li><h6>Enjoy Feedback</h6></li>
-        <p><i>Feedback encourages improvement.  I value the input and guidance 
+        <li><h4>Love of learning</h4>
+        <p>I enjoy developing and picking up new knowledge.
+          I want my skills to continually improve so I can add value to the 
+          companies and products I represent
+        </p></li>
+        <li><h4>Enjoy Feedback</h4></li>
+        <p>Feedback encourages improvement.  I value the input and guidance 
           of those around me.
-        </i></p>
-        <li><h6>Easy to work with</h6></li>
+        </p>
+        <li><h4>Easy to work with</h4></li>
         <p>I like to get work done
           while enjoying who I'm working with and believe good relationships
           are essential to productivity.  Even essentric coworkers deserve
@@ -55,32 +57,77 @@
 
       <div id="prjcts">
           <md-list>
-          <h3 md-subheader>"Logging As A Service" Visualizer</h3>
+          <h4>"Logging As A Service" Visualizer</h4>
           
           <md-list-item >
             <md-icon md-list-icon style="color:#69e2ff">folder</md-icon>
             <!--<h4 md-line style="padding-bottom:10px">"Logging As A Service" Visualizer </h4>-->
 
             <p md-line>Front-End Tech: Angular 4, Twitter-Bootstrap, HighCharts, Material-Design</p>
-            <p md-line id="list-item-jn">- Http service sent a filter Object to Rest APIs to return JSON obj</p>
-            <p md-line id="list-item-jn">- Front-end functions Loop through data and organize it</p>
-            <p md-line id="list-item-jn">- Data represented using open-source HighChartsJS plugin APIs </p>
-            <p md-line id="list-item-jn">- UI options menu allows dynamic sorting for user drill-down </p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Http service sent a filter Object to Rest APIs to return JSON obj</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Front-end functions Loop through data and organize it</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Data represented using open-source HighChartsJS plugin APIs </p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>UI options menu allows dynamic sorting for user drill-down </p>
+            <p md-line id="bottom-line">
+              <span id="pill">Angular4</span>
+              <span id="pill">Bootstrap</span>
+              <span id="pill">SPA</span>
+              <span id="pill">AJAX</span>
+              <span id="pill">RESTAPI</span>
+              <span id="pill">JSPlugins</span>
+              <span id="pill">MVC</span>
+              <span id="pill">TypeScript</span>
+
+            </p>
           </md-list-item>
           <md-divider></md-divider>
-          <h3 md-subheader>'Missing-Map' Local Animal Finder</h3>
+          <h4>'Missing-Map' Local Animal Finder</h4>
           
           <md-list-item >
             <md-icon md-list-icon style="color:#69e2ff">folder</md-icon>
             <!--<h4 md-line style="padding-bottom:10px">"Logging As A Service" Visualizer </h4>-->
 
-            <p md-line> Front-End Tech: Angular 4, Twitter-Bootstrap, GoogleMaps API, Government API</p>
-            <p md-line id="list-item-jn">- Local Municipality API returns JSON object which populates a list-view of recently collected animals</p>
-            <p md-line id="list-item-jn">- Click a button, address string is converted to search string and passed to Google API to return lat/lng</p>
-            <p md-line id="list-item-jn">- GoogleMaps plugin allows dynamic visual representatin of found pets </p>
-            
+          
+              
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Local Municipality API returns JSON object which populates a list-view of recently collected animals</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Click a button, address string is converted to search string and passed to Google API to return lat/lng</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>GoogleMaps plugin allows dynamic visual representatin of found pets </p>
+            <p md-line id="bottom-line">
+              <span id="pill">Angular4</span>
+              <span id="pill">Bootstrap</span>
+              <span id="pill">SPA</span>
+              <span id="pill">AJAX</span>
+              <span id="pill">RESTAPI</span>
+              <span id="pill">GoogleMaps</span>
+              <span id="pill">MVC</span>
+              <span id="pill">TypeScript</span>
+              <span id="pill">GovAPI</span>
+            </p>
           </md-list-item>
-        
+
+          <md-divider></md-divider>
+
+          <h4>'Missing-Map' Local Animal Finder</h4>
+          <md-list-item >
+            <md-icon md-list-icon style="color:#69e2ff">folder</md-icon>
+            <!--<h4 md-line style="padding-bottom:10px">"Logging As A Service" Visualizer </h4>-->
+
+            <p md-line> Front-End Tech: Angular 4, Twitter-Bootstrap, GoogleMaps API, Government API</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Local Municipality API returns JSON object which populates a list-view of recently collected animals</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Click a button, address string is converted to search string and passed to Google API to return lat/lng</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>GoogleMaps plugin allows dynamic visual representatin of found pets </p>
+            <p md-line id="bottom-line">
+              <span id="pill">Angular4</span>
+              <span id="pill">Bootstrap</span>
+              <span id="pill">SPA</span>
+              <span id="pill">AJAX</span>
+              <span id="pill">RESTAPI</span>
+              <span id="pill">GoogleMaps</span>
+              <span id="pill">MVC</span>
+              <span id="pill">TypeScript</span>
+              <span id="pill">GovAPI</span>
+            </p>
+          </md-list-item>
         </md-list>
       </div> <!-- end of prjcts div -->
       </md-tab>
