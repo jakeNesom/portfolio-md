@@ -122,12 +122,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   padding-left:10px;
 }
 
+#icon-link {
+  display:initial;
+  z-index:10;
+  transform:translateX(-50px);
+}
 #icon-link a {
   color:#fafafa;
 }
 
 a#icon-link {
   color: #fafafa;
+  
 }
 
 #abt {

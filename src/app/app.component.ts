@@ -19,26 +19,29 @@ interface Window {
   styleUrls: [ 'css/app.component.css'],
   animations: [
     trigger('iconEnter', [
-      state('false', style({
-        opacity:0,
-        transform: 'translateX(-100%)'
-      })),
-      state('true',   style({
-        opacity:1,
-        transform: 'translateX(0)' 
-      })),
-      transition('0 => 1', [ 
-        animate(300, keyframes([
-        style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px)',  offset: 0.3}),
-        style({opacity: 1, transform: 'translateX(0)',     offset: 1.0})
-      ]))
-      ]),
-      
-
-    ])
+      state('false', style({transform: 'translate(-100%, 0)', 
+       opacity:0
     
-  ]
+  })),
+    state('true', style({ transform: 'translate(0,0)', opacity:1 })),
+    transition('false => true ', [
+      animate('500ms ease-out', keyframes([
+        style({
+          transform: 'translate(-500%,0)', 
+          opacity:0,
+          offset:0
+        }),
+        style({
+          transform: 'translate(-20px,0)', 
+          opacity:1,
+          offset:.3
+        })
+      ]) 
+      )
+    ]),
+    
+  ])
+]
 })
 export class AppComponent  { 
   public setup = {
@@ -108,7 +111,7 @@ export class AppComponent  {
     },
   ];
 
-  public initialLoad = false;
+  public initialLoad = 'false';
   options:any;
   styles:any;
   
@@ -119,7 +122,7 @@ export class AppComponent  {
     public addressManip:AddressManip) {
     
       console.log('gmapstyle: ' + gmapStyle);
-     
+      
     
 }
   
@@ -132,8 +135,15 @@ export class AppComponent  {
   //           mapTypeId: google.maps.MapTypeId.ROADMAP
   //       };
   //     var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
+    let _this = this;
     
-    this.initialLoad = true;
+    setTimeout( function() {
+
+      _this.toggleTransition();
+     
+
+    }, 3000);
+    
         
   }
 
@@ -181,6 +191,12 @@ export class AppComponent  {
   clickedMarker(label?, arrIndex?) {
 
     console.log('marker clicked');
+  }
+
+  toggleTransition() {
+    console.log(this.initialLoad);
+    this.initialLoad = (this.initialLoad === 'false' ? 'true' : 'false');
+
   }
   
 }
