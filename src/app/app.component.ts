@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+import { trigger,
+         state, 
+         style, 
+         animate, 
+         transition, 
+         keyframes,
+         AnimationEvent,
+        } from '@angular/animations';
 
 import { PupperData } from './services/pupper-data.service';
 import { AddressManip } from './services/address-manip.service';
@@ -18,30 +25,64 @@ interface Window {
   templateUrl: 'views/app.component.html',
   styleUrls: [ 'css/app.component.css'],
   animations: [
-    trigger('iconEnter', [
-      state('false', style({transform: 'translate(-100%, 0)', 
-       opacity:0
-    
-  })),
-    state('true', style({ transform: 'translate(0,0)', opacity:1 })),
-    transition('false => true ', [
-      animate('500ms ease-out', keyframes([
-        style({
-          transform: 'translate(-500%,0)', 
-          opacity:0,
-          offset:0
-        }),
-        style({
-          transform: 'translate(-20px,0)', 
-          opacity:1,
-          offset:.3
-        })
-      ]) 
-      )
+  trigger('jumbotron', [
+      state('stop', style({ 
+        transform: 'translateY(0) scaleY(1)', 
+        opacity:1
+      })),
+      state('start', style({ 
+        transform:'translateY(-400px) scaleY(.2)',
+        opacity: 0,
+        display:'none'
+        
+        // transform:'scaleY(.2)'  
+      })),
+      transition('stop => start', animate('1500ms ease-in')),
     ]),
-    
-  ])
-]
+  trigger('smallNav', [
+      state('stop', style({transform: 'translate(0,0)', display:'none',
+      opacity:0
+  })),
+    state('start', style({ transform: 'translate(0,0)', display:'block',
+    opacity:1 })),
+    transition('stop => start', [
+      animate('1500ms ease-in')
+      ]) 
+      
+    ]),
+    trigger('mainSection', [
+      state('stop', style({ 
+        transform: 'translateY(0)', 
+        
+      })),
+      state('start', style({ 
+        transform:'translateY(0)',
+        
+        
+        
+        // transform:'scaleY(.2)'  
+      })),
+      transition('stop => start', animate('1500ms ease-in', style({
+        transform:'translateY(-335px)'
+      }))),
+    ]),
+    trigger('spacer', [
+      state('stop', style({ 
+        
+        display:'none'
+        // transform: 'translateY(-70px) scaleY(0)', 
+        // display:'none'
+      })),
+      state('start', style({ 
+        backgroundColor:"#fff",
+        display:'block'
+        // transform:'scaleY(.2)'  
+      })),
+      transition('stop => start', animate('100ms 1400ms ease-out',
+      style({ backgroundColor:"#00b0ff", display:'inherit'}))),
+    ]),
+  ]
+
 })
 export class AppComponent  { 
   public setup = {
@@ -112,6 +153,9 @@ export class AppComponent  {
   ];
 
   public initialLoad = 'false';
+  public hideJumbotron = 'no';
+
+  public animationState = 'stop';
   options:any;
   styles:any;
   
@@ -135,14 +179,11 @@ export class AppComponent  {
   //           mapTypeId: google.maps.MapTypeId.ROADMAP
   //       };
   //     var map = new google.maps.Map(document.getElementById("gmap"), mapProp);
-    let _this = this;
     
-    setTimeout( function() {
-
-      _this.toggleTransition();
-     
-
-    }, 3000);
+    let vm = this;
+    window.setTimeout(function() {
+      vm.toggleTransition();
+    }, 4000)
     
         
   }
@@ -194,9 +235,17 @@ export class AppComponent  {
   }
 
   toggleTransition() {
-    console.log(this.initialLoad);
-    this.initialLoad = (this.initialLoad === 'false' ? 'true' : 'false');
+    
+    this.animationState = (this.animationState === 'start' ? 'stop' : 'start');
+    console.log(this.animationState);
 
+  //   var _this = this;
+  //   window.setTimeout(function(){
+
+  //   _this.hideJumbotron = 'yes';
+
+  // }, 3000);
   }
+  
   
 }

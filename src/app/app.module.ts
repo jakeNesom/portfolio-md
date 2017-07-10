@@ -3,7 +3,7 @@ import { HttpModule } from '@angular/http';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+//import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 // angular google maps wrappers
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -29,7 +29,7 @@ import { AppComponent }  from './app.component';
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
+    
     MaterialModule,
     MdNativeDateModule,
     ReactiveFormsModule,

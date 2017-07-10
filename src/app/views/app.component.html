@@ -1,20 +1,20 @@
 
-<div class="nav-jn hidden" > 
- <a href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i> </a>
+<div [@smallNav]="animationState" class="nav-jn" >
+ <a href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i></a>
  <a href="https://github.com/jakeNesom" id="icon-link" target="_blank" ><i class="fa fa-github fa-2x fa-fw" aria-hidden="true"></i> </a>
  <a href="https://stackoverflow.com/users/5569658/jake" target="_blank" id="icon-link"><i class="fa fa-stack-overflow fa-2x fa-fw" aria-hidden="true"></i> </a>
  <a href="mailto:jnesom@me.com"  id="icon-link" ><i class="fa fa-envelope fa-fw fa-2x" aria-hidden="true"></i></a>
  <a href="../../assets/dl/jakeNesomFEDResume.pdf" id="icon-link"><i class="fa fa-file-text fa-fw fa-2x" aria-hidden="true"></i></a>
  <h4 class="pull-right">Jake Nesom • Front End Dev</h4>
 </div>
-<div class="spacer hidden"></div>
+<div [@spacer]="animationState" class='spacer'> </div>
 <div class="container-fluid-jn">
-  <div class="jumbotron jn ">
+  <div [@jumbotron]="animationState" class="jumbotron jn adjust">
     <div style="margin-left:80px;">
       <h1>Jake Nesom</h1>
-      <p>front-end angular developer</p>
+      <p>front-end developer</p>
       <p style="margin-left:-10px;">
-        <a [@iconEnter]="initialLoad" href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i  class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i> </a>
+        <a href="https://www.linkedin.com/in/jake-nesom-73bb8778/" target="_blank" id="icon-link"> <i  class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i> </a>
         <a href="https://github.com/jakeNesom" target="_blank" id="icon-link"><i class="fa fa-github fa-2x fa-fw" aria-hidden="true"></i> </a>
         <a href="https://stackoverflow.com/users/5569658/jake" target="_blank" id="icon-link"><i class="fa fa-stack-overflow fa-2x fa-fw" aria-hidden="true"></i> </a>
         <a href="mailto:jnesom@me.com" id="icon-link"><i class="fa fa-envelope fa-fw fa-2x" aria-hidden="true"  ></i></a>
@@ -22,12 +22,13 @@
       </p>
     </div>
   </div>
-  <div class="row">
+  <div [@mainSection]='animationState' class="row">
     <div class="col-sm-8 col-sm-offset-1">
+      <!--<div class='btn btn-primary btn-md' (click)="toggleTransition()">Toggle </div>-->
       <md-tab-group>
   <md-tab label="About">
     <div id="abt">
-      <p> My name is Jake and  I'm a creative, enthusiastic entry-level dev looking for front-end / full-stack work.  </p>
+      <p> My name is Jake and  I'm a creative and enthusiastic entry-level dev looking for front-end / full-stack work.  </p>
       <h3 style="padding-top: 10px;">Why work with me? </h3>
       <ul>
         <li><h4>Love of learning</h4>
@@ -57,7 +58,7 @@
 
       <div id="prjcts">
           <md-list>
-          <h4>"Logging As A Service" Visualizer</h4>
+          <h4><a href="http://www.carnitas.rocks/laasviz" target="_blank">/LaasViz </a></h4>
           
           <md-list-item >
             <md-icon md-list-icon style="color:#69e2ff">folder</md-icon>
@@ -157,6 +158,7 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center" id="footer">
         <strong>Just Footer Things</strong>
+        
       </div>
       
     </div>

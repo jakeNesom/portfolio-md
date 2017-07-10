@@ -60,19 +60,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   top:0;
   min-height: 50px;
   padding-top:5px;
-  width:100vw;
+  padding-left:60px;
+  width:100%;
+  max-width:100%;
   z-index: 1001;
-  background-color:#0081cb;
+  background-color:#00b0ff;
   font-family: 'Roboto', sans-serif;
   color: #fafafa;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   display:block;
 }
 .hidden { display:none; }
+
 .spacer {
   position:relative;
-  min-height:70px;
+  top:0;
+  min-height:50px;
+  margin-bottom:20px;
   width:100vw;
+  background-color:#00b0ff;
+}
+
+.adjust {
+  position:inherit;
+  padding-top:-70px;
 }
 .nav-jn a {
   padding-top:5px;
