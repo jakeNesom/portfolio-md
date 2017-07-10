@@ -213,3 +213,34 @@ new theme --- for another day - jn */
 
   padding: 8px 0px 8px 0px !important;
 }
+
+@media only screen and (min-width:992px) {
+
+  #skills-lg {
+    display:inherit;
+  }
+
+  #skills-sm {
+    display:none;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+   #skills-lg {
+     display:none;
+   }
+
+   #skills-sm {
+     display:inherit;
+     margin-bottom:15px;
+   }
+
+   #skills-layout {
+     margin:5px 5px 5px 5px;
+     min-width: 75px;
+     float:left;
+     display:block;
+   }
+
+}

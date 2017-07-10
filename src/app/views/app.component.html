@@ -21,11 +21,32 @@
         <a href="../../assets/dl/jakeNesomFEDResume.pdf" id="icon-link" download><i class="fa fa-file-text fa-fw fa-2x" aria-hidden="true"></i></a>
       </p>
     </div>
-  </div>
+  </div> <!-- end of jumbotron --> 
+
+  <div [@mainSection]='animationState' class="row" id="skills-sm">
+    <div class='col-xs-9 col-xs-offset-1'>
+      
+       
+        <h4>Skills</h4>
+        <div *ngFor="let item of skills" id="skills-layout">
+          <h5>{{item.name}}</h5>
+          <md-progress-bar
+            id="sidebar-item"
+            [color]="item.color"
+            [mode]="item.mode"
+            [value]="item.value"
+            [bufferValue]="item.bufferVal">
+          </md-progress-bar>
+        </div> <!-- end of *ngFor Loop -->
+        
+      
+    </div>
+  </div> <!-- end of ROW #skills-sm -->
   <div [@mainSection]='animationState' class="row">
-    <div class="col-sm-8 col-sm-offset-1">
+    <div class="col-xs-9 col-xs-offset-1 col-sm-8 col-sm-offset-1">
+       
       <!--<div class='btn btn-primary btn-md' (click)="toggleTransition()">Toggle </div>-->
-      <md-tab-group>
+  <md-tab-group>
   <md-tab label="About">
     <div id="abt">
       <p> My name is Jake and  I'm a creative and enthusiastic entry-level dev looking for front-end / full-stack work.  </p>
@@ -114,9 +135,9 @@
             <!--<h4 md-line style="padding-bottom:10px">"Logging As A Service" Visualizer </h4>-->
 
             <p md-line> Front-End Tech: Angular 4, Twitter-Bootstrap, GoogleMaps API, Government API</p>
-            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Local Municipality API returns JSON object which populates a list-view of recently collected animals</p>
-            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Click a button, address string is converted to search string and passed to Google API to return lat/lng</p>
-            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>GoogleMaps plugin allows dynamic visual representatin of found pets </p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Bootstrap themed view displays a quote stored in JSON object</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>Click a button, Angular animations transiiton to new quote.</p>
+            <p md-line id="list-item-jn"><i class="fa fa-circle fa-fw" id="circle-font" aria-hidden="true"></i>After 10 quotes, an http service API accesses endpoint with more quotes</p>
             <p md-line id="bottom-line">
               <span id="pill">Angular4</span>
               <span id="pill">Bootstrap</span>
@@ -133,8 +154,8 @@
       </div> <!-- end of prjcts div -->
       </md-tab>
     </md-tab-group> 
-    </div>
-    <div class="col-sm-3 col-lg-2">
+    </div> <!-- End of main column -->
+    <div id="skills-lg" class="col-xs-8 col-sm-3 col-md-2 col-lg-2">
       <div class="sidebar">
       <h4>Skills</h4>
       <div *ngFor="let item of skills">
@@ -149,16 +170,28 @@
       </div>
       
       
-      </div>
-    </div>
+      </div> <!-- end of sidebar -->
+    </div> <!-- end of skills sectionn -->
     
-  </div>
-</div>
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
 <div class='container-fluid footer-jn'>
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2 text-center" id="footer">
-        <strong>Just Footer Things</strong>
         
+        <p style="margin-top:10px; margin-bottom:15px;">
+          <strong > &copy; Jake Nesom • 2017</strong>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/jake-nesom-73bb8778/" style="margin:20px 10px 0px 10px; color:#fff; font-size:20px;"><strong>LinkedIn</strong></a>
+          <a href="https://github.com/jakeNesom" style="margin:20px 10px 0px 10px; color:#fff; font-size:20px;"><strong>GitHub</strong></a>
+          <a href="https://stackoverflow.com/users/5569658/jake" style="margin:20px 10px 0px 10px; color:#fff; font-size:20px;"><strong>StackExchange</strong></a>
+          <a href="mailto:jnesom@me.com" style="margin:20px 10px 0px 10px; color:#fff; font-size:20px;"><strong>Email</strong></a>
+          <a href="../../assets/dl/jakeNesomFEDResume.pdf" style="margin:20px 10px 0px 10px; color:#fff; font-size:20px;"><strong>Resume</strong></a>
+        </p>
+        <p style="font-size: 25px;">
+          <strong>(650) 966-6016</strong>
+        </p>
       </div>
       
     </div>
